@@ -1,0 +1,93 @@
+/* FULL BACKGROUND IMAGE */
+.login-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* DARK OVERLAY */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* OTP FORM BOX */
+.login-box {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 320px;
+  text-align: center;
+}
+
+/* INPUT */
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BUTTON */
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  background: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-box button:hover {
+  background: #0b5ed7;
+}
+
+/* OVERLAY LAYOUT */
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+/* TOP QUOTE */
+.top-quote {
+  position: absolute;
+  top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+.top-quote h1 {
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* LOGIN BOX (center stays same) */
+
+/* BOTTOM BRAND */
+.bottom-brand {
+  position: absolute;
+  bottom: 20px;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 2px;
+}
