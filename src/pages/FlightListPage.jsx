@@ -1,33 +1,53 @@
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
+import FlightCard from "../components/FlightCard";
 
 function FlightListPage() {
-        const location = useLocation();
-        const searchData = location.state;
+  const location = useLocation();
+  const navigate = useNavigate();
 
-        const [flights, setFlights] = useState([]);
+  const flights = location.state?.flights || [];
+  const searchData = location.state?.searchData;
 
-        useEffect(() => {
-            //Mock data (replace with API later)
-            setFlights([
-                { id:1, airline: "Indigo", price: 5000 },
-                { id:2, airline: "Air India", price: 6500 },
-            ]);
-        }, []);
+  // Handle refresh / direct access
+  if (!searchData) {
+    return (
+      <div style={{ padding: "20px" }}>
+        <h2>No Search Data Found</h2>
+        <button onClick={() => navigate("/dashboard")}>
+          Go Back
+        </button>
+      </div>
+    );
+  }
 
-        return (
-            <div>
-                <h2>Flights</h2>
+  const handleSelect = (flight) => {
 
-                {flights.map((flight) => (
-                    <div key={flight.id}>
-                        <p>{flight.airline}</p>
-                        <p>{flight.price}</p>
-                        <button>Select</button>
-                    </div>
-                ))}
-            </div>
-        );
+    // Next step: navigate to booking page
+    // navigate("/booking", { state: { flight, searchData } });
+  };
+
+  return (
+    <div style={{ padding: "20px" }}>
+      <h2>
+        {searchData.from} → 
+        {" "}
+        {searchData.to}
+      </h2>
+      <p>Date: {searchData.date}</p>
+
+      {flights.length === 0 ? (
+        <p>No flights found</p>
+      ) : (
+        flights.map((flight) => (
+          <FlightCard
+            key={flight.id}
+            flight={flight}
+            onSelect={handleSelect}
+          />
+        ))
+      )}
+    </div>
+  );
 }
 
 export default FlightListPage;

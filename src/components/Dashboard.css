@@ -1,0 +1,138 @@
+/* Background */
+.dashboard-container {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #00e5ff;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+/* Search box */
+.search-box {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.tabs button {
+  padding: 8px 16px;
+  border: none;
+  background: #ddd;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tabs .active {
+  background: #007bff;
+  color: white;
+}
+
+/* Form row */
+.form-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ✅ ALL INPUTS SAME SIZE */
+.form-row input,
+.form-row select,
+.passenger-display {
+  flex: 1;
+  height: 40px;                /* ✅ FIXED */
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  background: white;
+  font-size: 14px;
+}
+
+/* Swap button */
+.swap-btn {
+  height: 40px;
+  width: 40px;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Search button */
+.search-btn {
+  height: 40px;
+  padding: 0 20px;
+  background: #ff5722;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-btn:disabled {
+  background: #aaa;
+}
+
+/* Passenger box */
+.passenger-box {
+  position: relative;
+}
+
+/* Passenger display */
+.passenger-display {
+  cursor: pointer;
+  justify-content: space-between;
+}
+
+/* Dropdown */
+.passenger-dropdown {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 250px;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  z-index: 100;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Rows inside dropdown */
+.passenger-dropdown .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Buttons inside dropdown */
+.passenger-dropdown button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  border-radius: 4px;
+}

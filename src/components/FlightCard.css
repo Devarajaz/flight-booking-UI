@@ -1,0 +1,44 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.flight-table th,
+.flight-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.flight-table th {
+  background-color: #1976d2;
+  color: white;
+}
+
+.flight-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.flight-table tr:hover {
+  background-color: #e3f2fd;
+}
+
+button {
+  padding: 5px 10px;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #1b5e20;
+}
+
